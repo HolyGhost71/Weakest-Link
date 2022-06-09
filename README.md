@@ -5,8 +5,8 @@ Assistant for running The Weakest Link game show.
 Before running, edit the players.txt file to add the names of the players, separated by a comma and a space (e.g. James, John, Jane).
 
 Buttons:
-- Correct - Changes the current amount
-- Icorrect - Resets the current amount
+- Correct - Changes the current amount (0, 20, 50, 100, 200, 400, 600, 800, 1000) and changes player
+- Incorrect - Resets the current amount and changes player
 - Bank - Stores the current amount and sets it to 0
 - End Round - Sets the current amount to 0 and displays the number of correct answers and banks for each player
 
