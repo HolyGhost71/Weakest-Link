@@ -11,19 +11,16 @@ root=Tk()
 root.title("Weakest Link")
 root.resizable(False,False)
 
-global scoreArray
-scoreArray = [0, 20, 50, 100, 200, 400, 600, 800, 1000]
-
-global currentTotal
-currentTotal = 0
-
 global index
-index = 0
-
+global scoreArray
+global currentTotal
 global currentPlayer
-currentPlayer = 0
-
 global playerArray
+
+index = 0
+scoreArray = [0, 20, 50, 100, 200, 400, 600, 800, 1000]
+currentTotal = 0
+currentPlayer = 0
 
 buttonFont = font.Font(family="Neusa Next", size = 30, underline = 1)
 endFont = font.Font(family="Neusa Next", size = 15)
