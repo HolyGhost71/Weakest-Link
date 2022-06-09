@@ -2,8 +2,7 @@
 
 Assistant for running The Weakest Link game show. 
 
-Correct Button - Changes the current amount
-
-Incorrect Button - Resets the current amount
-
-Bank Button - Stores the current amount and sets it to 0
+How to use:
+-Correct Button - Changes the current amount
+-Icorrect Button - Resets the current amount
+-ank Button - Stores the current amount and sets it to 0
