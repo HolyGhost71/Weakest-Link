@@ -96,14 +96,28 @@ def endRound():
         print(f"{i}\t{player.name}\t\t{player.correct}\t{player.banks}")
         player.correct = 0
         player.banks = 0
+    
+    while (True):    
+        playerRemoved = int(input("\nID of the weakest link (chosen by players): "))
+        if 0 <= playerRemoved < len(playerArray):
+            print(f"Removed {playerArray[playerRemoved].name}")
+            break
+        print("Invalid player")
+    
+    while (True):    
+        currentPlayer = int(input("\nID of the strongest link: "))
+        if currentPlayer == playerRemoved:
+            print("The strongest link cannot be the weakest link")
+            
+        elif 0 <= currentPlayer < len(playerArray):
+            print(f"The strongest link was {playerArray[currentPlayer].name}")
+            break
         
-    playerRemoved = int(input("\nWhich player has been voted out: "))
-    print(f"Removed {playerArray[playerRemoved].name}")
+        else:
+            print("Invalid player")
     
-    startingPlayer = int(input("\nWhich player was the strongest link: "))
-    currentPlayer = startingPlayer
     
-    if playerRemoved < startingPlayer:
+    if playerRemoved < currentPlayer:
         currentPlayer -= 1
     
     playerArray.remove(playerArray[playerRemoved])
