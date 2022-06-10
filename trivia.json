@@ -1,0 +1,7 @@
+[
+  {"category_id":"MUSIC", "question":"Which artist has the highest streamed song on spotify", "answer":"Ed Sheeran"},
+  {"category_id":"MUSIC", "question":"What is the most streamed song on spotify", "answer":"Blinding Light - The Weeknd"},
+  {"category_id":"MUSIC", "question":"Who is considered the 'King of Pop'", "answer":"Michael Jackson"},
+  {"category_id":"MUSIC", "question":"What dance craze did Michael Jackson popularize in 1983?", "answer":"The Moonwalk"},
+  {"category_id":"MUSIC", "question":"In what year did British artist Olly Murs die", "answer":"2017"}
+]

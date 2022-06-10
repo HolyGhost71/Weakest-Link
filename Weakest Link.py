@@ -2,9 +2,9 @@
 
 #Defines all of the imports needed
 from tkinter import *
-import tkinter
 import tkinter.font as font
-import time
+import json
+import random
 
 #Window Setup
 root=Tk()
@@ -23,8 +23,9 @@ currentTotal = 0
 currentPlayer = 0
 
 buttonFont = font.Font(family="Neusa Next", size = 30, underline = 1)
-endFont = font.Font(family="Neusa Next", size = 15)
+endFont = font.Font(family="Neusa Next", size = 12)
 textFont = font.Font(family="Neusa Next", size = 15)
+questionFont = font.Font(family="Neusa Next", size = 13)
 
 class Player:
     def __init__(self, name):
@@ -136,6 +137,10 @@ i = 0
 for i in range(0,len(playerNameArray)):
     playerArray.append(Player(playerNameArray[i]))
 
+file = open("trivia.json")
+data = json.load(file)
+q = random.choice(data)
+
 #Buttons that the player uses
 correctButton=Button(root, text="Correct", command=correct, bg="#81c97b", font = buttonFont).grid(row=0, column=0)
 incorrectButton=Button(root, text="Incorrect", command=incorrect, bg="#cf4a55", font = buttonFont).grid(row=0, column=1)
@@ -144,6 +149,6 @@ runningLabel = Label(root, text = "Money: "+str(scoreArray[index]), font=textFon
 currentLabel = Label(root, text = "Total: "+str(currentTotal), font=textFont).grid(row=1, column=2)
 endRoundButton=Button(root, text="End Round", command=endRound, bg="#fff3cf", font = endFont).grid(row=2, column=2)
 currentPlayerLabel = Label(root, text = str(playerArray[currentPlayer].name), font = textFont).grid(row=2, column=0)
-
+qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=3, columnspan=3)
 #Runs the game
 root.mainloop()
