@@ -16,15 +16,16 @@ global scoreArray
 global currentTotal
 global currentPlayer
 global playerArray
+global questions
 
 index = 0
 scoreArray = [0, 20, 50, 100, 200, 400, 600, 800, 1000]
 currentTotal = 0
 currentPlayer = 0
 
-buttonFont = font.Font(family="Neusa Next", size = 30, underline = 1)
-endFont = font.Font(family="Neusa Next", size = 12)
-textFont = font.Font(family="Neusa Next", size = 15)
+buttonFont = font.Font(family="Neusa Next", size = 31, underline = 1)
+endFont = font.Font(family="Neusa Next", size = 13)
+textFont = font.Font(family="Neusa Next", size = 16)
 questionFont = font.Font(family="Neusa Next", size = 13)
 
 class Player:
@@ -49,16 +50,19 @@ def correct():
         runningLabel = Label(root, text = "Money: "+str(scoreArray[index]), font=textFont).grid(row=1, column=0)
     
     playerArray[currentPlayer%len(playerArray)].correct += 1
-        
+    
     updateCurrentPlayer()
         
 def incorrect():
     global index
     global playerArray
     global currentPlayer
+    global questions
+    
     index = 0
     runningLabel = Label(root, text = "                      ", font=textFont).grid(row=1, column=0)
     runningLabel = Label(root, text = "Money: "+str(0), font=textFont).grid(row=1, column=0)
+    
     updateCurrentPlayer()
 
 def bank():
@@ -77,9 +81,23 @@ def bank():
     
 def updateCurrentPlayer():
     global currentPlayer
+    global questions
+    
     currentPlayer += 1
     currentPlayerLabel = Label(root, text = "                 ", font = textFont).grid(row=2, column=0)
     currentPlayerLabel = Label(root, text = str(playerArray[currentPlayer%len(playerArray)].name), font = textFont).grid(row=2, column=0)
+    
+    if (len(questions) == 0):
+        print("\nResetting and repeating questions")
+        file = open("trivia.json")
+        questions = json.load(file)
+        file.close()
+        
+    q = random.choice(questions)
+    questions.remove(q)
+    qAndALabel = Label(root, text ="                                                                                             ", font=font.Font(family="Neusa Next", size = 14)).grid(row=3, columnspan=3)
+    qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=3, columnspan=3)
+
     
 def endRound():
     global playerArray
@@ -138,8 +156,10 @@ for i in range(0,len(playerNameArray)):
     playerArray.append(Player(playerNameArray[i]))
 
 file = open("trivia.json")
-data = json.load(file)
-q = random.choice(data)
+questions = json.load(file)
+q = random.choice(questions)
+questions.remove(q)
+file.close()
 
 #Buttons that the player uses
 correctButton=Button(root, text="Correct", command=correct, bg="#81c97b", font = buttonFont).grid(row=0, column=0)
