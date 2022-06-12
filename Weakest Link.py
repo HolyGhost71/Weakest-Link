@@ -99,7 +99,7 @@ def updateCurrentPlayer():
     categoryLabel = Label(root, text ="                         ", font=textFont).grid(row=1, column =1)
     categoryLabel = Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
 
-    qAndALabel = Label(root, text ="                                                                                             \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
+    qAndALabel = Label(root, text ="                                                                                                            \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
     qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
 
     
@@ -107,6 +107,7 @@ def endRound():
     global playerArray
     global currentPlayer
     global index
+    global questions 
     
     index = 0
     runningLabel = Label(root, text = "                 ", font=textFont).grid(row=3, column=0)
@@ -147,7 +148,12 @@ def endRound():
 
     currentPlayerLabel = Label(root, text = "         ", font = textFont).grid(row=1, column=0)
     currentPlayerLabel = Label(root, text = str(playerArray[currentPlayer%len(playerArray)].name), font = textFont).grid(row=1, column=0)
-        
+    
+    q = random.choice(questions)
+    questions.remove(q)
+    
+    qAndALabel = Label(root, text ="                                                                                                            \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
+    qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
 
 playerArray = []
 file = open("players.txt","r")

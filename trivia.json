@@ -7,6 +7,18 @@
   {"category":"MUSIC", "question":"What card game appeared in a #1 Lady Gaga song", "answer":"Poker"},
   {"category":"MUSIC", "question":"Reggae originates from which Carribean island", "answer":"Jamaica"},
   {"category":"MUSIC", "question":"By what 4-letter name is U2s front man better known?", "answer":"Bono"},
+  {"category":"MUSIC", "question":"Who wrote the lead single for the Bond movie No Time To Die", "answer":"Billie Eilish"},
+  {"category":"MUSIC", "question":"What rock star is also a horror movie writer and director", "answer":"Rob Zombie"},
+  {"category":"MUSIC", "question":"Which classic composer was deaf", "answer":"Beethoven"},
+  {"category":"MUSIC", "question":"Which astronomer was namedropped in Queen's 'Bohemian Rhapsody'", "answer":"Galileo"},
+  {"category":"MUSIC", "question":"Rapper Shawn Carter goes by what other name", "answer":"Jay-Z"},
+  {"category":"MUSIC", "question":"What genre of music did Taylor Swift start in", "answer":"Country"},
+  
+  {"category":"CELEBRITIES", "question":"Kanye West legally changed his name to what in 2021", "answer":"Ye"},
+  {"category":"CELEBRITIES", "question":"Which actor starred in 'Ghost Rider' and 'National Treasure'", "answer":"Nicholas Cage"},
+  {"category":"CELEBRITIES", "question":"Which boxer was known as 'The People's Champion'", "answer":"Muhammad Ali"},
+
+  {"category":"RELIGION", "question":"How many deadly sins are there", "answer":"7"},
   
   {"category":"SCIENCE", "question":"What is the symbol for copper", "answer":"Cu"},
   {"category":"SCIENCE", "question":"Which subatomic particle has a charge of -1", "answer":"Electron"},
@@ -29,34 +41,51 @@
   {"category":"GEOGRAPHY", "question":"Which city originally exported hotdogs to the US", "answer":"Orange"},
   {"category":"GEOGRAPHY", "question":"On what date is St Patrick's Day celebrated", "answer":"17th of March"},
   {"category":"GEOGRAPHY", "question":"14% of Americans could not identify which country on a map", "answer":"America"},
-
+  {"category":"GEOGRAPHY", "question":"Which long, thin country spans over half of the South American west coast", "answer":"Chile"},
+  
   {"category":"SPORTS", "question":"What shirt number does Ronaldo wear", "answer":"7"},
   {"category":"SPORTS", "question":"How many balls are on a pool table at the start of the game", "answer":"16"},
   {"category":"SPORTS", "question":"What is the ball used in badminton", "answer":"Shuttlecock"},
   {"category":"SPORTS", "question":"Who won the Euros in 2021", "answer":"Italy"},
   {"category":"SPORTS", "question":"Is the top of the net higher in Tennis or Table Tennis", "answer":"Tennis"},
-  {"category":"SPORTS", "question":"Measured in feet, how high is a basketball net", "answer":"10"},
-  {"category":"SPORTS", "question":"What volleyball position ", "answer":"10"},
+  {"category":"SPORTS", "question":"How high is a basketball net is feet", "answer":"10"},
+  {"category":"SPORTS", "question":"How many people are on the pitch at the start of a football match", "answer":"23"},
 
   {"category":"ANIMALS", "question":"What is the name of the fastest land animal", "answer":"Cheetah"},
   {"category":"ANIMALS", "question":"What is the only mammal capable of sustained flight", "answer":"Bat"},
   {"category":"ANIMALS", "question":"From which animal do we get venison", "answer":"Deer"},
   {"category":"ANIMALS", "question":"What was the first mammal to be launched into space", "answer":"Monkey"},
+  {"category":"ANIMALS", "question":"Which mammal has the most powerful bite in the world", "answer":"Hippo"},
+  {"category":"ANIMALS", "question":"What colour is a polar bear's skin", "answer":"Black"},
+
+  {"category":"SPACE", "question":"What planet has the strongest gravitational pull", "answer":"Jupiter"},
+  {"category":"SPACE", "question":"What is the hottest planet in our solar system", "answer":"Venus"},
+  {"category":"SPACE", "question":"What is the closest major galaxy to the Milky Way", "answer":"Andromeda"},
+  
+  {"category":"CARS", "question":"What animal can be seen on the Porsche Logo", "answer":"Horse"},
+  {"category":"CARS", "question":"Which sports car features in the Back To The Future trilogy", "answer":"DeLorean"},
+  {"category":"CARS", "question":"How many rings are in the Audi logo", "answer":"4"},
+
+  {"category":"BOARD GAMES", "question":"True/False: Monopoly banned in Spain?", "answer":"False"},
+  {"category":"BOARD GAMES", "question":"How many ships does each player have in Battleship", "answer":"5"},
+  {"category":"BOARD GAMES", "question":"Which chess piece cannot move backwards", "answer":"Pawn"},
+  {"category":"BOARD GAMES", "question":"How many points is the letter J worth in Scrabble", "answer":"8"},
 
   {"category":"TECHNOLOGY", "question":"What does the term GPU stand for", "answer":"Graphical Processing Unit"},
   {"category":"TECHNOLOGY", "question":"What is the smallest type of data", "answer":"Bit"},
-  {"category":"TECHNOLOGY", "question":"Which phone company created BBM", "answer":"Blackberry"},
+  {"category":"TECHNOLOGY", "question":"Which phone company created the messaging service BBM", "answer":"Blackberry"},
   {"category":"TECHNOLOGY", "question":"What does the acronym GIF stand for", "answer":"Graphics Interchange Format"},
   {"category":"TECHNOLOGY", "question":"Name three operating systems", "answer":"Windows, Linux, MacOS, Android, Unix, iOS etc."},
   {"category":"TECHNOLOGY", "question":"What colour is the black box on commercial planes", "answer":"Orange"},
+  {"category":"TECHNOLOGY", "question":"In what year was the first iPhone released", "answer":"2007"},
 
-  {"category":"BUSINESS", "question":"What product did Amazon start out selling", "answer":"Books"},
+  {"category":"BUSINESS", "question":"What product did Amazon initially start out selling", "answer":"Books"},
   {"category":"BUSINESS", "question":"What car company produced cars for the Nazi party", "answer":"Volkswagen"},
   {"category":"BUSINESS", "question":"What company creates the soft drink Fanta", "answer":"Coca-Cola"},
 
   {"category":"LITERACY", "question":"What unit of measurement is 0.9144 metres", "answer":"Yard"},
   {"category":"LITERACY", "question":"What word comes before deck, recorder and measure", "answer":"Tape"},
-  {"category":"LITERACY", "question":"What word shares its name with a rock and a mythological God", "answer":"Tape"},
+  {"category":"LITERACY", "question":"What word shares its name with a rocket and a mythological God", "answer":"Apollo"},
   {"category":"LITERACY", "question":"What word comes before beam, spot and set", "answer":"Sun"},
   {"category":"LITERACY", "question":"What is the first month of the year to have 30 days", "answer":"April"},
   {"category":"LITERACY", "question":"What relationship is your mother's cousin's child to you", "answer":"Second Cousin"},
@@ -67,12 +96,17 @@
   {"category":"YOUTUBE", "question":"What is the most disliked video on youtube", "answer":"Youtube Rewind 2016"},
   {"category":"YOUTUBE", "question":"What is the most viewed diss track of all time", "answer":"The Fall of Jake Paul"},
   {"category":"YOUTUBE", "question":"What is the most viewed music video", "answer":"Baby Shark"},
+  {"category":"YOUTUBE", "question":"Who is the most subscribed member of the Sidemen", "answer":"KSI"},
   
   {"category":"BOOKS", "question":"Which is the longest Harry Potter book", "answer":"Order of the Phoenix"},
-  {"category":"BOOKS", "question":"Which DC villain broke Batman's back", "answer":"Bane"},
   {"category":"BOOKS", "question":"What colour is the Mr Men character Mr Happy", "answer":"Yellow"},
-  {"category":"BOOKS", "question":"What superhero sidekick is known as Boy Wonder", "answer":"Robin"},
   {"category":"BOOKS", "question":"Who wrote the Hunger Games books", "answer":"Suzanne Collins"},
+  {"category":"BOOKS", "question":"What is the best selling book of all time", "answer":"The Bible"},
+  
+  {"category":"COMICS", "question":"Which DC villain broke Batman's back", "answer":"Bane"},
+  {"category":"COMICS", "question":"What superhero sidekick is known as Boy Wonder", "answer":"Robin"},
+  {"category":"COMICS", "question":"What was Superman's birth name", "answer":"Kal-EL"},
+  {"category":"COMICS", "question":"Reed Richards is known by what superhero name", "answer":"Mr Fantastic"},
 
   {"category":"FILM", "question":"Who directed E.T", "answer":"Steven Spielberg"},
   {"category":"FILM", "question":"The Wet Bandits are the villains of which Christmas movie", "answer":"Home Alone"},
@@ -81,6 +115,8 @@
   {"category":"FILM", "question":"Who is Shrek's best friend", "answer":"Donkey"},
   {"category":"FILM", "question":"The Minions first appeared in which movie", "answer":"Despicable Me"},
   {"category":"FILM", "question":"Count Dooku is also known as Darth: ", "answer":"Tyrannus"},
+  {"category":"FILM", "question":"What is the best movie of 2022 so far", "answer":"Morbius"},
+  {"category":"FILM", "question":"What is the highest grossing R rated movie of all time", "answer":"Joker"},
 
   {"category":"ANIME", "question":"Who is the main Jojo in JJBA part 3", "answer":"Jotaro Kujo"},
   {"category":"ANIME", "question":"What does Naruto want to become", "answer":"Hokage"},
@@ -98,6 +134,7 @@
   {"category":"TELEVISION", "question":"You think this is bad? This? This:", "answer":"Chicanery"},
   {"category":"TELEVISION", "question":"Andrew Lincoln plays the main character of this AMC show", "answer":"The Walking Dead"},
   {"category":"TELEVISION", "question":"What was the first MCU Disney+ show", "answer":"WandaVision"},
+  {"category":"TELEVISION", "question":"Cartman, Stan, Kyle and Kenny are from which animated show", "answer":"South Park"},
  
   {"category":"GAMING", "question":"Vice City and San Andreas are games from which franchise", "answer":"GTA"},
   {"category":"GAMING", "question":"Who drove the truck during the Fortnite Collision event", "answer":"Peely"},
@@ -126,7 +163,7 @@
   {"category":"FOOD", "question":"What colour is the flesh of an avocado", "answer":"Green"},
   {"category":"FOOD", "question":"What type of nuts are used in marzipan", "answer":"Almonds"},
   {"category":"FOOD", "question":"What type of food is pitta", "answer":"Bread"},
-  {"category":"FOOD", "question":"In Greek Mythology, what is the food of the Gods", "answer":"Ambrosia"},
+  {"category":"FOOD", "question":"What is the food of the Gods in Greek Mythology,", "answer":"Ambrosia"},
   {"category":"FOOD", "question":"Is wholemeal bread brown or white", "answer":"Brown"},
   {"category":"FOOD", "question":"What fruit is named after its colour", "answer":"Orange"},
 
