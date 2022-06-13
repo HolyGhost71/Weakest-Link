@@ -23,10 +23,10 @@ scoreArray = [0, 20, 50, 100, 200, 400, 600, 800, 1000]
 currentTotal = 0
 currentPlayer = 0
 
-buttonFont = font.Font(family="Neusa Next", size = 31, underline = 1)
-endFont = font.Font(family="Neusa Next", size = 13)
-textFont = font.Font(family="Neusa Next", size = 16)
-questionFont = font.Font(family="Neusa Next", size = 13)
+buttonFont = font.Font(family="Neusa Next", size = 45, underline = 1)
+endFont = font.Font(family="Neusa Next", size = 18)
+textFont = font.Font(family="Neusa Next", size = 22)
+questionFont = font.Font(family="Neusa Next", size = 16)
 
 class Player:
     def __init__(self, name):
@@ -36,7 +36,6 @@ class Player:
 
 def correct():
     global index
-    global playerArray
     global currentPlayer
     
     if index < len(scoreArray) - 1:
@@ -55,7 +54,6 @@ def correct():
         
 def incorrect():
     global index
-    global playerArray
     global currentPlayer
     global questions
     
@@ -68,7 +66,6 @@ def incorrect():
 def bank():
     global index
     global currentTotal
-    global playerArray
     global currentPlayer
     
     currentTotal += scoreArray[index]
@@ -96,13 +93,12 @@ def updateCurrentPlayer():
     q = random.choice(questions)
     questions.remove(q)
     
-    categoryLabel = Label(root, text ="                         ", font=textFont).grid(row=1, column =1)
+    categoryLabel = Label(root, text ="                              ", font=textFont).grid(row=1, column =1)
     categoryLabel = Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
 
-    qAndALabel = Label(root, text ="                                                                                                            \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
+    qAndALabel = Label(root, text ="                                                                                                                                                                                                          \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
     qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
 
-    
 def endRound():
     global playerArray
     global currentPlayer
@@ -123,10 +119,15 @@ def endRound():
     
     while (True):    
         playerRemoved = int(input("\nID of the weakest link (chosen by players): "))
-        if 0 <= playerRemoved < len(playerArray):
+        if playerRemoved == -1:
+            print("Aborted")
+            return
+        elif 0 <= playerRemoved < len(playerArray):
             print(f"Removed {playerArray[playerRemoved].name}")
             break
         print("Invalid player")
+        
+    
     
     while (True):    
         currentPlayer = int(input("\nID of the strongest link: "))
@@ -145,14 +146,37 @@ def endRound():
         currentPlayer -= 1
     
     playerArray.remove(playerArray[playerRemoved])
-
+    
     currentPlayerLabel = Label(root, text = "         ", font = textFont).grid(row=1, column=0)
     currentPlayerLabel = Label(root, text = str(playerArray[currentPlayer%len(playerArray)].name), font = textFont).grid(row=1, column=0)
     
     q = random.choice(questions)
     questions.remove(q)
     
-    qAndALabel = Label(root, text ="                                                                                                            \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
+    categoryLabel = Label(root, text ="                              ", font=textFont).grid(row=1, column =1)
+    categoryLabel = Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
+
+    
+    qAndALabel = Label(root, text ="                                                                                                                                                                                                                                      \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
+    qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
+
+def reroll():
+    global currentPlayer
+    global questions
+    
+    if (len(questions) == 0):
+        print("\nResetting and repeating questions")
+        file = open("trivia.json")
+        questions = json.load(file)
+        file.close()
+        
+    q = random.choice(questions)
+    questions.remove(q)
+    
+    categoryLabel = Label(root, text ="                              ", font=textFont).grid(row=1, column =1)
+    categoryLabel = Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
+
+    qAndALabel = Label(root, text ="                                                                                                                                                                                                          \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
     qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
 
 playerArray = []
@@ -172,16 +196,16 @@ questions.remove(q)
 file.close()
 
 #Buttons that the player uses
-correctButton=Button(root, text="Correct", command=correct, bg="#81c97b", font = buttonFont, width = 8).grid(row=0, column=0)
-incorrectButton=Button(root, text="Incorrect", command=incorrect, bg="#cf4a55", font = buttonFont, width = 8).grid(row=0, column=1)
-bankButton=Button(root, text="Bank", command=bank, bg="#61a2c7", font = buttonFont, width = 8).grid(row=0, column=2)
-runningLabel = Label(root, text = "Money: "+str(scoreArray[index]), font=textFont).grid(row=3, column=0)
-currentLabel = Label(root, text = "Total: "+str(currentTotal), font=textFont).grid(row=3, column=2)
+correctButton=Button(root, text="Correct", command=correct, bg="#81c97b", font = buttonFont, width = 11).grid(row=0, column=0)
+incorrectButton=Button(root, text="Incorrect", command=incorrect, bg="#cf4a55", font = buttonFont, width = 11).grid(row=0, column=1)
+bankButton=Button(root, text="Bank", command=bank, bg="#61a2c7", font = buttonFont, width = 11).grid(row=0, column=2)
+runningLabel=Label(root, text = "Money: "+str(scoreArray[index]), font=textFont).grid(row=3, column=0)
+currentLabel=Label(root, text = "Total: "+str(currentTotal), font=textFont).grid(row=3, column=2)
 endRoundButton=Button(root, text="End Round", command=endRound, bg="#fff3cf", font = endFont).grid(row=1, column=2)
-currentPlayerLabel = Label(root, text = str(playerArray[currentPlayer].name), font = textFont).grid(row=1, column=0)
-qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
-categoryLabel = Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
-
+currentPlayerLabel=Label(root, text = str(playerArray[currentPlayer].name), font = textFont).grid(row=1, column=0)
+qAndALabel=Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
+categoryLabel=Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
+redoButton=Button(root, text="Reroll Question", command=reroll, bg="#8adcff", font = endFont).grid(row=3, column=1)
 
 #Runs the game
 root.mainloop()
