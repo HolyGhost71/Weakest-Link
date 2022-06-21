@@ -99,6 +99,20 @@ def updateCurrentPlayer():
     qAndALabel = Label(root, text ="                                                                                                                                                                                                          \n                                                   ", font=font.Font(family="Neusa Next", size = 14)).grid(row=2, columnspan=3)
     qAndALabel = Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
 
+def reset():
+    global playerArray
+    playerArray = []
+    file = open("players.txt","r")
+    text = file.read()
+    playerNameArray = text.split(", ")
+    file.close()
+    
+    i = 0
+    for i in range(0,len(playerNameArray)):
+        playerArray.append(Player(playerNameArray[i]))
+    
+    endRound()
+
 def endRound():
     global playerArray
     global currentPlayer
@@ -106,7 +120,7 @@ def endRound():
     global questions 
     
     index = 0
-    runningLabel = Label(root, text = "                 ", font=textFont).grid(row=3, column=0)
+    runningLabel = Label(root, text = "                    ", font=textFont).grid(row=3, column=0)
     runningLabel = Label(root, text = "Money: "+str(scoreArray[index]), font=textFont).grid(row=3, column=0)
     
     print("\nID\tName\t\tCorrect\tBanks")
@@ -121,14 +135,13 @@ def endRound():
         playerRemoved = int(input("\nID of the weakest link (chosen by players): "))
         if playerRemoved == -1:
             print("Aborted")
-            return
+            break
         elif 0 <= playerRemoved < len(playerArray):
             print(f"Removed {playerArray[playerRemoved].name}")
             break
-        print("Invalid player")
+        else:
+            print("Invalid player")
         
-    
-    
     while (True):    
         currentPlayer = int(input("\nID of the strongest link: "))
         if currentPlayer == playerRemoved:
@@ -206,6 +219,7 @@ currentPlayerLabel=Label(root, text = str(playerArray[currentPlayer].name), font
 qAndALabel=Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont).grid(row=2, columnspan=3)
 categoryLabel=Label(root, text =q["category"], font=textFont).grid(row=1, column =1)
 redoButton=Button(root, text="Reroll Question", command=reroll, bg="#8adcff", font = endFont).grid(row=3, column=1)
+resetButton=Button(root, text="Reset Game", command=reset, bg="#ff9ef7", font = endFont).grid(row=4, column=0)
 
 #Runs the game
 root.mainloop()

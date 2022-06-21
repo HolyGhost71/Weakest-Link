@@ -10,6 +10,7 @@ Buttons:
 - Bank - Stores the current amount and sets it to 0
 - End Round - Sets the current amount to 0 and displays the number of correct answers and banks for each player
 - Reroll Question - If the question that comes up is too difficult or not what you need, you can reroll for a new one
+- Reset Game - If you want to play again, press the button and all the players will be re-added from the text file without all the used questions being re-added - good for multiple games without repeat questions
 
 At the end of each round, players discuss who to eliminate, this is done in person and does not require interaction with the program. Once the person has been decided, enter who they have chosen to remove. 
 The host selects the strongest link (typically the player with the most correct answers and/or banks). Both of these are selected using the ID of the player.
