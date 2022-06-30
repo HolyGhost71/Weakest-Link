@@ -1,12 +1,10 @@
 [
   {"category":"MUSIC", "question":"Which artist has the highest streamed song on spotify", "answer":"Ed Sheeran"},
-  {"category":"MUSIC", "question":"What is the most streamed song on spotify", "answer":"Blinding Light - The Weeknd"},
   {"category":"MUSIC", "question":"Who is considered the 'King of Pop'", "answer":"Michael Jackson"},
   {"category":"MUSIC", "question":"What dance did Michael Jackson popularize in 1983?", "answer":"The Moonwalk"},
   {"category":"MUSIC", "question":"What was Kanye West's third studio album", "answer":"Graduation"},
   {"category":"MUSIC", "question":"What card game appeared in a #1 Lady Gaga song", "answer":"Poker"},
   {"category":"MUSIC", "question":"Reggae originates from which Carribean island", "answer":"Jamaica"},
-  {"category":"MUSIC", "question":"By what 4-letter name is U2s front man better known?", "answer":"Bono"},
   {"category":"MUSIC", "question":"Who wrote the lead single for the Bond movie No Time To Die", "answer":"Billie Eilish"},
   {"category":"MUSIC", "question":"What rock star is also a horror movie writer and director", "answer":"Rob Zombie"},
   {"category":"MUSIC", "question":"Which classic composer was deaf", "answer":"Beethoven"},
@@ -37,10 +35,12 @@
   {"category":"GEOGRAPHY", "question":"What country has the most tornados per square mile", "answer":"The UK"},
   {"category":"GEOGRAPHY", "question":"Which two countries share the largest border", "answer":"US and Canada"},
   {"category":"GEOGRAPHY", "question":"In what country does the Cannes film festival take place", "answer":"France"},
-  {"category":"GEOGRAPHY", "question":"Which city originally exported hotdogs to the US", "answer":"Orange"},
-  {"category":"GEOGRAPHY", "question":"On what date is St Patrick's Day celebrated", "answer":"17th of March"},
+  {"category":"GEOGRAPHY", "question":"Which city originally exported hotdogs to the US", "answer":"Frankfurt"},
   {"category":"GEOGRAPHY", "question":"14% of Americans could not identify which country on a map", "answer":"America"},
   {"category":"GEOGRAPHY", "question":"Which long, thin country spans over half of the South American west coast", "answer":"Chile"},
+
+  {"category":"CELEBRATIONS", "question":"In which month is St Patrick's Day celebrated", "answer":"March"},
+  {"category":"CELEBRATIONS", "question":"Dia de los Muertos is the Spanish name for which Spanish event", "answer":"Day of the Dead"},
 
   {"category":"CURRENCIES", "question":"What is the currency of India", "answer":"Rupees"},
   {"category":"CURRENCIES", "question":"What is the largest cryptocurreny by market cap", "answer":"Bitcoin"},
@@ -172,6 +172,7 @@
 
   {"category":"POLITICS", "question":"Who became Prime Minister of Canada in 2015", "answer":"Justin Trudeau"},
   {"category":"POLITICS", "question":"Who became the first Prime Minister of Cube in 1959", "answer":"Fidel Castro"},
+  {"category":"POLITICS", "question":"Who was the President of America between the two George Bushes", "answer":"Bill Clinton"},
 
   {"category":"DRINKS", "question":"How is a drink served when it is described as frappe", "answer":"With crushed ice"},
   {"category":"DRINKS", "question":"The 18th Amendment in the US Constitution was repealed in 1933. What did it ban", "answer":"Alcohol"},
