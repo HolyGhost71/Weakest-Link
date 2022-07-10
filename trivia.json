@@ -6,7 +6,7 @@
   {"category":"MUSIC", "question":"What card game appeared in a #1 Lady Gaga song", "answer":"Poker"},
   {"category":"MUSIC", "question":"Reggae originates from which Carribean island", "answer":"Jamaica"},
   {"category":"MUSIC", "question":"Who wrote the lead single for the Bond movie No Time To Die", "answer":"Billie Eilish"},
-  {"category":"MUSIC", "question":"What rock star is also a horror movie writer and director", "answer":"Rob Zombie"},
+  {"category":"MUSIC", "question":"What rock star with a surname named after an undead human is also a horror movie writer and director", "answer":"Rob Zombie"},
   {"category":"MUSIC", "question":"Which classic composer was deaf", "answer":"Beethoven"},
   {"category":"MUSIC", "question":"Which astronomer was namedropped in Queen's 'Bohemian Rhapsody'", "answer":"Galileo"},
   {"category":"MUSIC", "question":"Rapper Shawn Carter goes by what other name", "answer":"Jay-Z"},
@@ -182,7 +182,7 @@
   {"category":"DRINKS", "question":"Is Guinness vegan?", "answer":"Yes"},
   {"category":"DRINKS", "question":"Name the oldest fizzy soft drink, which shares its name with a type of fruit", "answer":"Dr Pepper"},
 
-  {"category":"FANDOME", "question":"Including bots and rounded up, how many members are in the server", "answer":"80"},
+  {"category":"FANDOME", "question":"Including bots and rounded to the nearest 10, how many members are in the server", "answer":"80"},
   {"category":"FANDOME", "question":"After Doc, who was the first person to join The FanDome", "answer":"Batnerd"},
   {"category":"FANDOME", "question":"After Doc, who sent the first message into The FanDome", "answer":"Spring"},
   {"category":"FANDOME", "question":"In which month and year did TMU fall", "answer":"March 2021"},

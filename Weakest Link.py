@@ -181,6 +181,7 @@ def reroll():
 def setBank():
     if index == 0: bankButton.config(state=DISABLED)   
     else: bankButton.config(state=NORMAL) 
+
 playerArray = []
 file = open("players.txt","r")
 text = file.read()
