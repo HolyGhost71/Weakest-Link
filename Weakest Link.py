@@ -5,6 +5,7 @@ from tkinter import *
 import tkinter.font as font
 import json
 import random
+import requests
 
 #Window Setup
 root=Tk()
@@ -89,9 +90,12 @@ def updateCurrentPlayer():
     
     if (len(questions) == 0):
         print("\nResetting and repeating questions")
-        file = open("trivia.json")
-        questions = json.load(file)
-        file.close()
+        # file = open("trivia.json")
+        # questions = json.load(file)
+        # file.close()
+
+        response = requests.get('https://the-trivia-api.com/v2/questions')
+        questions = response.json()
         
     setBank()    
     reroll()
@@ -168,15 +172,18 @@ def reroll():
     
     if (len(questions) == 0):
         print("\nResetting and repeating questions")
-        file = open("trivia.json")
-        questions = json.load(file)
-        file.close()
+        # file = open("trivia.json")
+        # questions = json.load(file)
+        # file.close()
+
+        response = requests.get('https://the-trivia-api.com/v2/questions')
+        questions = response.json()
         
     q = random.choice(questions)
     questions.remove(q)
     
     categoryLabel.config(text=q["category"])
-    qAndALabel.config(text="Q: "+q["question"]+"\nA: "+q["answer"])
+    qAndALabel.config(text="Q: "+q["question"]["text"]+"\nA: "+q["correctAnswer"])
 
 def setBank():
     if index == 0: bankButton.config(state=DISABLED)   
@@ -192,11 +199,13 @@ i = 0
 for i in range(0,len(playerNameArray)):
     playerArray.append(Player(playerNameArray[i]))
 
-file = open("trivia.json")
-questions = json.load(file)
+# file = open("trivia.json")
+# questions = json.load(file)
+response = requests.get('https://the-trivia-api.com/v2/questions')
+questions = response.json()
 q = random.choice(questions)
 questions.remove(q)
-file.close()
+# file.close()
 
 #Buttons that the player uses
 correctButton=Button(root, text="Correct", command=correct, bg="#81c97b", font = buttonFont, width = 11).grid(row=0, column=0)
@@ -212,7 +221,7 @@ runningLabel=Label(root, text = "Money: "+str(scoreArray[index]), font=textFont)
 runningLabel.grid(row=3, column=0)
 currentLabel=Label(root, text = "Total: "+str(currentTotal), font=textFont)
 currentLabel.grid(row=3, column=2)
-qAndALabel=Label(root, text ="Q: "+q["question"]+"\nA: "+q["answer"], font=questionFont)
+qAndALabel=Label(root, text ="Q: "+q["question"]["text"]+"\nA: "+q["correctAnswer"], font=questionFont)
 qAndALabel.grid(row=2, columnspan=3)
 categoryLabel=Label(root, text =q["category"], font=textFont)
 categoryLabel.grid(row=1, column =1)
