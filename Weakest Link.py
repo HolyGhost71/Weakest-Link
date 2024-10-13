@@ -94,8 +94,7 @@ def updateCurrentPlayer():
         # questions = json.load(file)
         # file.close()
 
-        response = requests.get('https://the-trivia-api.com/v2/questions')
-        questions = response.json()
+        questions = getQuestions()
         
     setBank()    
     reroll()
@@ -166,6 +165,11 @@ def endRound():
     setBank()
     reroll()
 
+def getQuestions():
+    response = requests.get('https://the-trivia-api.com/v2/questions')
+    questions = response.json()
+    return questions
+
 def reroll():
     global currentPlayer
     global questions
@@ -176,9 +180,7 @@ def reroll():
         # questions = json.load(file)
         # file.close()
 
-        response = requests.get('https://the-trivia-api.com/v2/questions')
-        questions = response.json()
-        
+    questions = getQuestions()
     q = random.choice(questions)
     questions.remove(q)
     
@@ -201,8 +203,7 @@ for i in range(0,len(playerNameArray)):
 
 # file = open("trivia.json")
 # questions = json.load(file)
-response = requests.get('https://the-trivia-api.com/v2/questions')
-questions = response.json()
+questions = getQuestions()
 q = random.choice(questions)
 questions.remove(q)
 # file.close()
